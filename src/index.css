@@ -24,7 +24,7 @@ nav {
   background-color: #363a45;
   height: 100vh;
   margin-right: 15px;
-  overflow-y: scroll;
+  overflow-y: auto;
   text-align: center;
   width: 250px;
 }
@@ -47,7 +47,12 @@ nav li a {
   text-decoration: none;
 }
 
-.nav-active {
+.nav-active,
+li > a.active {
   color: grey;
   transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
 }

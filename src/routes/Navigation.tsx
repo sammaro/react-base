@@ -1,17 +1,23 @@
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, NavLink, Navigate, Route, Routes } from 'react-router-dom';
 
 import logo from '../logo.svg';
 import { routes } from './routes';
 
 export const Navigation = () => {
 
-  const routerComponents = routes.map(({ path, element }, key) => <Route path={path} element={element} key={key} />);
-  const routerComponentsNavLink = routes.map(({ path, title }, key) =>
-    <li key={key}>
+  const routerComponentsNavLink = routes.map(({ path, title }) =>
+    <li key={path}>
       <NavLink to={path}>
         {title}
       </NavLink>
     </li>
+  );
+
+  const routerComponents = routes.map(({ path, element: Component }) =>
+    <Route
+      key={path}
+      path={path}
+      element={<Component />} />
   );
 
   return (
@@ -26,6 +32,7 @@ export const Navigation = () => {
 
         <Routes>
           {routerComponents}
+          <Route path="/*" element={<Navigate to={routes[0].path} replace />} />
         </Routes>
       </div>
     </BrowserRouter>

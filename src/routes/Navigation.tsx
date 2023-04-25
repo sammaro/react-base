@@ -6,9 +6,9 @@ import { routes } from './routes';
 
 export const Navigation = () => {
 
-  const routerComponentsNavLink = routes.map(({ path, title }) =>
+  const routerComponentsNavLink = routes.map(({ path, title, to }) =>
     <li key={path}>
-      <NavLink to={path}>
+      <NavLink to={to}>
         {title}
       </NavLink>
     </li>
@@ -34,7 +34,7 @@ export const Navigation = () => {
 
           <Routes>
             {routerComponents}
-            <Route path="/*" element={<Navigate to={routes[0].path} replace />} />
+            <Route path="/*" element={<Navigate to={routes[0].to} replace />} />
           </Routes>
         </div>
       </BrowserRouter>

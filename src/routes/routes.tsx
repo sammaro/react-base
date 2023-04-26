@@ -1,4 +1,5 @@
 import { LazyPage1, LazyPage2, LazyPage3 } from '../01-lazyload/pages';
+import { ShoppingPage } from '../02-components-patterns/pages/ShoppingPage';
 
 interface RouteElement {
   path: string;
@@ -9,8 +10,8 @@ interface RouteElement {
 export const routes: RouteElement[] = [
   {
     path: '/',
-    title: 'Home',
-    element: () => (<h1>Home</h1>),
+    title: 'Shopping',
+    element: ShoppingPage,
   }, {
     path: '/lazy1',
     title: 'Lazy 1',

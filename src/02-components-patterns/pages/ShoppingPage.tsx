@@ -29,10 +29,7 @@ export const ShoppingPage = () => {
 
             <button onClick={reset}>Reset</button>
             <button onClick={() => increaseBy(-2)}>-2</button>
-            {isMaxCountReached
-              ? null
-              : (<button onClick={() => increaseBy(2)}>+2</button>)
-            }
+            {!isMaxCountReached && (<button onClick={() => increaseBy(2)}>+2</button>)}
             <span>{count}</span>
           </>
         )}

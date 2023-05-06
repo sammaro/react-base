@@ -1,4 +1,10 @@
-import { LazyPage1, LazyPage2, LazyPage3 } from '../01-lazyload/pages';
+import {
+  FormikAbstraction,
+  FormikBasicPage,
+  FormikComponents,
+  FormikYupPage,
+  RegisterPage,
+} from '../03-forms/pages/';
 
 interface RouteElement {
   path: string;
@@ -12,16 +18,24 @@ export const routes: RouteElement[] = [
     title: 'Home',
     element: () => (<h1>Home</h1>),
   }, {
-    path: '/lazy1',
-    title: 'Lazy 1',
-    element: LazyPage1,
+    path: '/register',
+    title: 'Register',
+    element: RegisterPage,
   }, {
-    path: '/lazy2',
-    title: 'Lazy 2',
-    element: LazyPage2,
+    path: '/formikBasic',
+    title: 'FormikBasic',
+    element: FormikBasicPage,
   }, {
-    path: '/lazy3',
-    title: 'Lazy 3',
-    element: LazyPage3,
+    path: '/formikYup',
+    title: 'FormikYup',
+    element: FormikYupPage,
+  }, {
+    path: '/formikComponents',
+    title: 'FormikComponents',
+    element: FormikComponents,
+  }, {
+    path: '/formikAbstraction',
+    title: 'FormikAbstraction',
+    element: FormikAbstraction,
   }
 ];

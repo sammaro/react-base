@@ -1,8 +1,11 @@
 import {
+  DynamicFormPage,
+  DynamicFormPagev2,
   FormikAbstraction,
   FormikBasicPage,
   FormikComponents,
   FormikYupPage,
+  RegisterFormikPage,
   RegisterPage,
 } from '../03-forms/pages/';
 
@@ -23,19 +26,31 @@ export const routes: RouteElement[] = [
     element: RegisterPage,
   }, {
     path: '/formikBasic',
-    title: 'FormikBasic',
+    title: 'Formik Basic',
     element: FormikBasicPage,
   }, {
     path: '/formikYup',
-    title: 'FormikYup',
+    title: 'Formik Yup',
     element: FormikYupPage,
   }, {
     path: '/formikComponents',
-    title: 'FormikComponents',
+    title: 'Formik Components',
     element: FormikComponents,
   }, {
     path: '/formikAbstraction',
-    title: 'FormikAbstraction',
+    title: 'Formik Abstraction',
     element: FormikAbstraction,
+  }, {
+    path: '/registerFormik',
+    title: 'Register Formik Page',
+    element: RegisterFormikPage,
+  }, {
+    path: '/dynamicForm',
+    title: 'Dynamic Form Page',
+    element: DynamicFormPage,
+  }, {
+    path: '/dynamicForm2',
+    title: 'Dynamic Form Page 2',
+    element: DynamicFormPagev2,
   }
 ];

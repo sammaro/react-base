@@ -1,0 +1,80 @@
+[
+  {
+    "type": "text",
+    "name": "firstName",
+    "placeholder": "First Name",
+    "label": "First Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "message": "First Name is required"
+      },
+      {
+        "type": "minLength",
+        "value": 3,
+        "message": "First Name must be at least 3 characters"
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "name": "lastName",
+    "placeholder": "Last Name",
+    "label": "Last Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength"
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "mail@example.com",
+    "label": "Email",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "email",
+        "message": "Please enter a valid email address"
+      }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "favGame",
+    "label": "Fav Game",
+    "value": "",
+    "options": [
+      {
+        "id": "1",
+        "label": "Chess"
+      },
+      {
+        "id": "2",
+        "label": "Tic-Tac-Toe"
+      },
+      {
+        "id": "3",
+        "label": "RPS"
+      },
+      {
+        "id": "4",
+        "label": "Rock Paper Scissors"
+      }
+    ],
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
+  }
+]
